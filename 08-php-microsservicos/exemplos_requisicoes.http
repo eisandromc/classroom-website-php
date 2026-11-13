@@ -1,0 +1,16 @@
+### Gateway operacional sem necessidade de autenticação
+GET http://127.0.0.1:8014/gateway/index.php?rota=status
+
+### Verifica catálogo e identidade (acessa dois bancos pela rede)
+GET http://127.0.0.1:8014/gateway/index.php?rota=saude
+
+### Lista categorias
+GET http://127.0.0.1:8014/gateway/index.php?rota=categorias
+
+### Lista produtos
+GET http://127.0.0.1:8014/gateway/index.php?rota=produtos
+
+### Sessão e token necessários antes de autenticar
+GET http://127.0.0.1:8014/gateway/index.php?rota=sessao
+
+### Faça login no navegador admin.html. As requisições administrativas usam cookie e X-CSRF-Token.

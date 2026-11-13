@@ -1,0 +1,3 @@
+@extends('layouts.admin')
+@section('conteudo')<section class="painel-caixa painel-login"><p>ÁREA RESTRITA</p><h1>Entrar na administração</h1><p>Somente ambiente local de ensino. Altere admin/admin antes de publicar.</p><form method="post" action="{{ route('admin.entrar') }}" class="painel-grade">@csrf
+<div class="painel-campo largo"><label for="usuario">Usuário</label><input id="usuario" name="usuario" required autocomplete="username"></div><div class="painel-campo largo"><label for="senha">Senha</label><input id="senha" type="password" name="senha" required autocomplete="current-password"></div><button class="painel-botao">Entrar</button></form></section>@endsection

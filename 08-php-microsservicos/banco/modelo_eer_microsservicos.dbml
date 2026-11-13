@@ -1,0 +1,26 @@
+// Dois bancos de dados independentes. Relacionamentos entre serviços NÃO são FKs.
+Project WebShoes_Microsservicos { database_type: 'MySQL' }
+Table webshoes_catalogo.categorias {
+ id int [pk, increment]
+ nome varchar(80)
+ slug varchar(100) [unique]
+ descricao varchar(255)
+ cor varchar(7)
+ ativo boolean
+}
+Table webshoes_catalogo.produtos {
+ id int [pk, increment]
+ categoria_id int [ref: > webshoes_catalogo.categorias.id]
+ nome varchar(120)
+ slug varchar(150) [unique]
+ preco decimal(10,2)
+ imagem varchar(100)
+ ativo boolean
+}
+Table webshoes_identidade.usuarios_administrativos {
+ id int [pk, increment]
+ usuario varchar(60) [unique]
+ senha_hash varchar(255)
+ ativo boolean
+}
+// O Gateway consulta identidade por HTTP e catálogo por HTTP.

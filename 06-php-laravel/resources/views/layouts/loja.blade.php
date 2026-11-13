@@ -1,0 +1,4 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>@yield('titulo','WebShoes')</title><link rel="stylesheet" href="{{ asset('assets/css/estilos.css') }}"></head>
+<body><div class="barra-topo">WEB SHOES · COMPRAS DEMONSTRATIVAS SEM PAGAMENTO</div>
+<header class="cabecalho"><div class="conteiner cabecalho-miolo"><a href="{{ route('loja.inicio') }}" class="logo"><span class="logo-marca">W</span><span>WEB<em>SHOES</em></span></a><nav class="navegacao"><a href="{{ route('loja.inicio') }}">Coleção</a><a href="{{ route('admin.login') }}">Administração</a></nav><div class="acoes-cabecalho">LARAVEL 13</div></div></header>
+<main id="conteudo">@yield('conteudo')</main><footer class="rodape"><div class="conteiner">WebShoes · Versão 10 · Laravel 13, MVC e Eloquent · Loja educativa</div></footer><script src="{{ asset('assets/js/loja.js') }}" defer></script></body></html>

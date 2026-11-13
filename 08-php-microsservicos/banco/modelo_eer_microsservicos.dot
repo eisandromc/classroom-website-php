@@ -1,0 +1,16 @@
+digraph G {
+ graph [fontname="Arial",rankdir=LR,bgcolor="white",nodesep=.65,ranksep=1];
+ node [fontname="Arial",shape=record,style="filled,rounded",color="#51606a",fillcolor="#f0f6f8"];
+ edge [color="#71838c",fontname="Arial",fontsize=10];
+ subgraph cluster_c {label="Banco: webshoes_catalogo";color="#cbd5df";
+ categorias [label="{categorias|PK id|nome|slug|descricao|cor|ativo}"];
+ produtos [label="{produtos|PK id|FK categoria_id|nome|preco|imagem|...}"];
+ categorias -> produtos [label="1:N"];
+ }
+ subgraph cluster_i {label="Banco: webshoes_identidade";color="#d3dcd2";
+ admin [fillcolor="#ecf4ea",label="{usuarios_administrativos|PK id|usuario|senha_hash|ativo}"];
+ }
+ gateway [shape=box,fillcolor="#fff0e6",color="#cf7b48",label="Gateway HTTP\nsem acesso SQL"];
+ gateway -> categorias [style=dashed,label="via serviço catálogo"];
+ gateway -> admin [style=dashed,label="via serviço identidade"];
+}

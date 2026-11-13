@@ -1,0 +1,38 @@
+Project webshoes {
+  database_type: 'MySQL'
+  Note: 'WebShoes 2.0 • Produtos, categorias e usuários administrativos'
+}
+Table categorias {
+  id int [pk, increment]
+  nome varchar(80) [not null]
+  slug varchar(100) [unique, not null]
+  descricao varchar(255) [not null]
+  cor varchar(7) [not null]
+  ativo boolean [not null, default: 1]
+}
+Table produtos {
+  id int [pk, increment]
+  categoria_id int [not null]
+  nome varchar(120) [not null]
+  slug varchar(150) [unique, not null]
+  marca varchar(70) [not null]
+  descricao_curta varchar(250) [not null]
+  descricao text [not null]
+  preco decimal(10,2) [not null]
+  preco_anterior decimal(10,2)
+  imagem varchar(100) [not null]
+  etiqueta varchar(30) [not null]
+  cor varchar(80) [not null]
+  tamanhos varchar(80) [not null]
+  destaque boolean [not null, default: 0]
+  ativo boolean [not null, default: 1]
+  criado_em timestamp [not null]
+}
+Table usuarios_administrativos {
+  id int [pk, increment]
+  usuario varchar(60) [not null, unique]
+  senha_hash varchar(255) [not null]
+  ativo boolean [not null, default: 1]
+  criado_em timestamp [not null]
+}
+Ref: produtos.categoria_id > categorias.id

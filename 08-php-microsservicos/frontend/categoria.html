@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f8f7f3">
+<meta name="description" content="WebShoes — catálogo de tênis alimentado por Gateway e serviços REST PHP OOP.">
+<title>WebShoes — Seu passo, suas regras</title>
+<link rel="stylesheet" href="assets/css/estilos.css">
+<script src="assets/js/configuracao.js" defer></script>
+<script src="assets/js/loja.js" defer></script>
+<script src="assets/js/api.js" defer></script>
+<script src="assets/js/paginas.js" defer></script>
+</head>
+<body>
+<div class="barra-topo">FRETE GRÁTIS FICTÍCIO A PARTIR DE R$ 399 · LOJA DEMONSTRATIVA SEM PAGAMENTO</div>
+<header class="cabecalho"><div class="conteiner cabecalho-miolo">
+<a href="index.html" class="logo" aria-label="WebShoes, página inicial"><span class="logo-marca">W</span><span>WEB<em>SHOES</em></span></a>
+<nav class="navegacao" id="navegacao" aria-label="Navegação principal"><a href="index.html#colecao">Coleção</a><a href="categoria.html?id=1">Lifestyle</a><a href="categoria.html?id=2">Corrida</a><a href="categoria.html?id=3">Basquete</a><a href="categoria.html?id=4">Skate</a><a href="admin.html">Admin</a></nav>
+<div class="acoes-cabecalho"><a class="botao-icone" href="index.html#colecao" title="Ver coleção" aria-label="Ver coleção"><svg viewBox="0 0 24 24"><circle cx="10.7" cy="10.7" r="6.7"/><path d="m16 16 5 5"/></svg></a>
+<button class="botao-icone" type="button" id="abrir-sacola" aria-label="Abrir sacola"><svg viewBox="0 0 24 24"><path d="M4 8h16l-1.2 13H5.2L4 8Z"/><path d="M8 9V6a4 4 0 0 1 8 0v3"/></svg><span id="contador-sacola" class="contador-sacola">0</span></button>
+<button class="botao-icone icone-menu" id="menu-mobile" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="navegacao"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+</div></div></header><main id="conteudo">
+
+<section class="conteiner intro-interna"><div class="trilha"><a href="index.html">Início</a><span>/</span><span>Categoria</span></div><h1 id="nome-categoria">Categoria</h1><p id="descricao-categoria">Conheça a coleção.</p></section>
+<section class="conteiner secao" id="colecao" style="padding-top:20px"><div class="filtros" id="filtros"><a href="index.html#colecao" class="filtro">Todos os modelos</a></div>
+<form class="barra-catalogo" id="formulario-busca" role="search"><div class="busca"><input id="busca" aria-label="Buscar nesta categoria" placeholder="Buscar nesta categoria..."></div><select id="ordem" class="ordenacao" aria-label="Ordenar produtos"><option value="destaques">Em destaque</option><option value="menor_preco">Menor preço</option><option value="maior_preco">Maior preço</option><option value="nome">Nome A–Z</option></select><button type="submit" class="botao-primario">Buscar</button></form>
+<div class="grade-produtos" id="grade-produtos" aria-live="polite"><div class="carregando">Carregando produtos da API...</div></div></section>
+</main>
+<footer class="rodape"><div class="conteiner"><div class="rodape-miolo">
+<div><a href="index.html" class="logo"><span class="logo-marca">W</span><span>WEB<em>SHOES</em></span></a><p>Tênis, cultura e movimento. Vitrine feita em HTML, CSS e JavaScript que consome uma Gateway e serviços REST em PHP.</p></div>
+<div class="rodape-links"><div><strong>EXPLORAR</strong><a href="index.html#colecao">Coleção</a><a href="categoria.html?id=1">Lifestyle</a><a href="categoria.html?id=2">Corrida</a></div><div><strong>SOBRE</strong><a href="index.html">WebShoes</a><a href="index.html#colecao">Produtos</a><a href="#conteudo">Voltar ao topo</a></div></div>
+</div><div class="rodape-base"><span>© WebShoes · Projeto educacional, marcas e produtos fictícios.</span><span>Área administrativa disponível · Sem pagamento ou processamento real de pedidos.</span></div></div></footer>
+<div class="sacola-cortina" id="sacola-cortina"></div><aside class="sacola-painel" id="sacola-painel" inert role="dialog" aria-modal="true" aria-label="Sacola de compras"><div class="sacola-topo"><h2>Sua sacola</h2><button class="botao-icone" type="button" id="fechar-sacola" aria-label="Fechar sacola">×</button></div><div class="sacola-corpo" id="sacola-corpo"></div><div class="sacola-base"><div class="sacola-total"><span>Subtotal</span><span id="sacola-total">R$ 0,00</span></div><button class="botao-primario" disabled type="button">Checkout indisponível</button><p class="sacola-nota">Sacola demonstrativa salva somente neste navegador.</p></div></aside><div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body></html>

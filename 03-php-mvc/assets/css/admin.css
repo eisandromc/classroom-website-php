@@ -1,0 +1,31 @@
+:root{--ws-preto:#161b1b;--ws-lima:#d0fc57;--ws-fundo:#f6f7f3;--ws-borda:#dce0da}
+body.admin{margin:0;background:var(--ws-fundo);color:var(--ws-preto);font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;line-height:1.5}
+.admin *{box-sizing:border-box}.admin a{color:inherit;text-decoration:none}.admin a:hover{text-decoration:underline}
+.admin .painel-topo{background:#161b1b;color:white;padding:18px max(20px,calc((100vw - 1160px)/2));display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.admin .painel-logo{font-size:1.35rem;font-weight:950;letter-spacing:-.05em}.admin .painel-logo em{font-style:normal;color:#d0fc57}
+.admin .painel-nav{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.admin .painel-area{width:min(1160px,calc(100% - 36px));margin:42px auto 64px}
+.admin h1{font-size:clamp(2rem,4vw,3.3rem);line-height:1.08;letter-spacing:-.055em;margin:0 0 12px}
+.admin h2{font-size:1.2rem;margin:0 0 16px}.admin p{color:#53605a}
+.admin .painel-cabecalho{display:flex;align-items:end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:25px}
+.admin .painel-caixa{padding:26px;background:white;border:1px solid var(--ws-borda);border-radius:18px;box-shadow:0 6px 30px #20302009}
+.admin .painel-login{width:min(450px,calc(100% - 28px));margin:10vh auto}
+.admin .painel-botoes{display:flex;gap:8px;flex-wrap:wrap}.admin .painel-botao{border:1px solid #1d2421;border-radius:9px;background:#1d2421;color:white;cursor:pointer;display:inline-flex;justify-content:center;align-items:center;padding:11px 17px;font:inherit;font-weight:700;min-height:44px}
+.admin .painel-botao:hover{filter:brightness(1.12);text-decoration:none}.admin .painel-botao.secundario{background:white;color:#222}.admin .painel-botao.perigo{background:#a3212b;color:white;border-color:#a3212b}
+.admin .painel-abas{display:flex;gap:7px;margin:14px 0 20px}.admin .painel-abas a{padding:11px 16px;border-radius:8px;border:1px solid #b4c1b8;font-weight:750}
+.admin .painel-abas a[aria-current=page]{background:#d0fc57;border-color:#d0fc57}
+.admin .painel-tabela-rolagem{width:100%;overflow-x:auto}
+.admin table{border-collapse:collapse;width:100%;text-align:left;min-width:650px}
+.admin th,.admin td{border-bottom:1px solid #e6eae4;padding:14px 12px;font-size:.92rem;text-align:left;vertical-align:middle}
+.admin th{color:#607067;text-transform:uppercase;letter-spacing:.07em;font-size:.72rem}
+.admin tr:last-child td{border-bottom:0}.admin .painel-miniatura{width:74px;height:56px;object-fit:contain;background:#f3f4ef;border-radius:7px}
+.admin .painel-grade{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}
+.admin .painel-campo{display:flex;flex-direction:column;gap:7px}.admin .painel-campo.largo{grid-column:1/-1}
+.admin label{font-weight:700;font-size:.9rem}.admin input:not([type=checkbox]):not([type=hidden]),.admin select,.admin textarea{font:inherit;padding:12px;border:1px solid #b7c1b8;border-radius:9px;width:100%;background:white;color:#1c2721}
+.admin textarea{min-height:90px;resize:vertical}.admin input:focus-visible,.admin select:focus-visible,.admin button:focus-visible,.admin a:focus-visible{outline:3px solid #719f22;outline-offset:2px}
+.admin .painel-opcoes{display:flex;gap:24px;flex-wrap:wrap;margin:20px 0}.admin .painel-opcoes label{display:flex;gap:8px;align-items:center}
+.admin .painel-alerta{background:#fff1ee;border:1px solid #d67a68;border-radius:10px;padding:13px 16px;color:#7a2420;margin-bottom:20px}
+.admin .painel-sucesso{background:#edf9d3;border:1px solid #a0c85b;border-radius:10px;padding:13px 16px;color:#314b0c;margin-bottom:20px}
+.admin .painel-dica{font-size:.86rem;color:#627066}.admin .painel-vazio{padding:20px;color:#637066}
+@media(max-width:650px){.admin .painel-grade{grid-template-columns:1fr}.admin .painel-area{margin-top:24px}.admin .painel-caixa{padding:18px}}
+.admin [hidden]{display:none!important}

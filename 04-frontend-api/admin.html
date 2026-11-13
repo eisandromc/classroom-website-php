@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Administração WebShoes com JavaScript consumindo a API REST em PHP.">
+<title>WebShoes | Administração via API REST</title>
+<link rel="stylesheet" href="assets/css/admin.css">
+<script src="assets/js/configuracao.js" defer></script><script src="assets/js/api.js" defer></script><script src="assets/js/admin.js" defer></script>
+</head><body class="admin">
+<header class="painel-topo"><a class="painel-logo" href="index.html">WEB<em>SHOES</em> <small>/ ADMIN · REST</small></a>
+<nav class="painel-nav"><a href="index.html">Voltar à loja</a><button class="painel-botao secundario" id="botao-sair" hidden type="button">Sair</button></nav></header>
+<main class="painel-area">
+<div id="status-admin" role="status" aria-live="polite"></div>
+<section id="secao-login" class="painel-caixa painel-login" hidden>
+<p>ÁREA RESTRITA</p><h1>Faça login</h1><p>Este painel HTML/CSS/JS utiliza a API REST da versão 04; não acessa MySQL diretamente.</p>
+<form id="formulario-login" class="painel-grade">
+<div class="painel-campo largo"><label for="usuario">Usuário</label><input id="usuario" name="usuario" type="text" required autocomplete="username"></div>
+<div class="painel-campo largo"><label for="senha">Senha</label><input id="senha" name="senha" type="password" required autocomplete="current-password"></div>
+<button type="submit" class="painel-botao">Entrar</button></form>
+</section>
+<section id="secao-admin" hidden>
+<div class="painel-cabecalho"><div><p>WEB SHOES / PAINEL POR API REST</p><h1>Gestão da loja</h1>
+<p>O JavaScript envia GET, POST, PUT e DELETE à API PHP independente.</p></div>
+<button id="botao-novo" class="painel-botao" type="button">+ Novo produto</button></div>
+<nav class="painel-abas" aria-label="Cadastros"><a href="#produtos" data-tipo="produtos">Produtos</a><a href="#categorias" data-tipo="categorias">Categorias</a></nav>
+<div id="painel-lista" class="painel-caixa"><h2 id="titulo-lista">Cadastros</h2><div id="tabela-registros" aria-live="polite">Carregando...</div></div>
+<div id="painel-formulario" class="painel-caixa" hidden><h2 id="titulo-formulario">Cadastrar</h2>
+<form id="formulario-registro" enctype="multipart/form-data"><div class="painel-grade" id="campos-formulario"></div>
+<div class="painel-opcoes"><label><input type="checkbox" name="ativo" id="campo-ativo" checked> Ativo</label>
+<label id="opcao-destaque"><input type="checkbox" name="destaque" id="campo-destaque"> Em destaque</label></div>
+<div class="painel-botoes"><button type="submit" class="painel-botao" id="botao-salvar">Salvar</button>
+<button type="button" class="painel-botao secundario" id="botao-cancelar">Cancelar</button></div>
+</form></div></section>
+</main></body></html>

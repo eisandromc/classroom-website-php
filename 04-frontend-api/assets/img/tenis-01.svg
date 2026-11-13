@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-label="Ilustração de tênis WebShoes 01">
+<defs>
+  <linearGradient id="upper" x1=".04" y1=".1" x2=".9" y2="1"><stop offset="0" stop-color="#F5D7BD"/><stop offset=".56" stop-color="#EFC5A1"/><stop offset="1" stop-color="#ED6A4A"/></linearGradient>
+  <linearGradient id="sole" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ffffff"/><stop offset="1" stop-color="#CCC9C3"/></linearGradient>
+  <filter id="shadow" x="-30%" y="-50%" width="160%" height="220%"><feGaussianBlur stdDeviation="15"/></filter>
+</defs>
+<ellipse cx="398" cy="421" rx="275" ry="23" fill="#373637" opacity=".15" filter="url(#shadow)"/>
+<g transform="translate(0,-2) rotate(-7 400 280)">
+  <path d="M113 319 C138 306 158 293 176 261 L208 216 C222 192 240 186 266 199 L345 246 C376 262 425 267 470 263 C515 259 540 282 560 294 C595 316 637 312 670 333 L681 350 C683 364 668 383 636 390 L216 391 C157 389 115 380 105 358 C98 341 100 328 113 319Z" fill="url(#upper)" stroke="#393636" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M116 340 C173 358 196 355 232 354 L652 353 C674 352 679 348 681 350 L681 372 C663 400 605 401 546 401 L216 401 C152 399 118 391 104 372 C99 364 99 350 116 340Z" fill="url(#sole)" stroke="#393636" stroke-width="6"/>
+  <path d="M128 372 C244 388 354 378 458 382 C559 388 631 391 660 375" fill="none" stroke="#BEBBB5" stroke-width="4" stroke-dasharray="17 12"/>
+  <path d="M190 266 L217 223 C237 200 260 206 274 220 L309 248 L291 329 L194 337 C166 326 170 295 190 266Z" fill="#ED6A4A" opacity=".8"/>
+  <path d="M219 228 L260 218 L332 262 L308 299 Z" fill="#F5D7BD" opacity=".7"/>
+  <path d="M314 267 C356 280 423 294 502 283 C525 279 556 293 583 314 C544 333 457 337 406 320 C365 304 339 307 299 314 Z" fill="#393636" opacity=".17"/>
+  <path d="M375 290 C407 293 433 301 453 319 C430 328 405 328 380 321 C365 317 344 307 324 308" fill="none" stroke="#393636" stroke-width="13" opacity=".8" stroke-linecap="round"/>
+  <path d="M355 294 C388 304 414 311 438 314" stroke="#F5D7BD" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M566 308 C594 308 615 326 635 334" stroke="#393636" stroke-width="7" fill="none" opacity=".65"/>
+  <path d="M226 246 L310 278 M215 263 L305 293 M204 280 L298 308" stroke="#FEFCF4" stroke-width="10" stroke-linecap="round" fill="none"/>
+  <path d="M226 246 L310 278 M215 263 L305 293 M204 280 L298 308" stroke="#393636" stroke-opacity=".24" stroke-width="2" fill="none"/>
+  <path d="M165 330 C188 342 212 346 237 345" stroke="#393636" stroke-opacity=".33" stroke-width="5" fill="none"/>
+  <circle cx="558" cy="329" r="9" fill="#ED6A4A" stroke="#fff" stroke-width="3"/>
+  <path d="M215 385 C224 385 614 385 633 384" stroke="#393636" stroke-opacity=".13" stroke-width="7"/>
+</g>
+</svg>

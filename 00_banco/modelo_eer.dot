@@ -1,0 +1,9 @@
+digraph webshoes {
+    graph [rankdir=TB,bgcolor="white",pad="0.35",nodesep="0.6",ranksep="0.55",fontname="Arial",label="WebShoes • Modelo EER / Administração",labelloc=t,fontsize=18,fontcolor="#202c24"];
+    node [shape=record,style="rounded,filled",fillcolor="#edf5e0",color="#50674e",fontname="Arial",fontsize=10,margin=".16,.13"];
+    categorias [label="{CATEGORIAS|PK id : INT|nome : VARCHAR(80)|slug : VARCHAR(100) UNIQUE|descricao : VARCHAR(255)|cor : VARCHAR(7)|ativo : BOOLEAN}"];
+    produtos [label="{PRODUTOS|PK id : INT|FK categoria_id : INT|nome : VARCHAR(120)|slug : VARCHAR(150) UNIQUE|marca : VARCHAR(70)|descricao_curta : VARCHAR(250)|descricao : TEXT|preco : DECIMAL(10,2)|preco_anterior : DECIMAL|imagem : VARCHAR(100)|etiqueta : VARCHAR(30)|cor : VARCHAR(80)|tamanhos : VARCHAR(80)|destaque : BOOLEAN|ativo : BOOLEAN|criado_em : TIMESTAMP}",fillcolor="#f4f7f5"];
+    usuarios [label="{USUARIOS_ADMINISTRATIVOS|PK id : INT|usuario : VARCHAR(60) UNIQUE|senha_hash : VARCHAR(255)|ativo : BOOLEAN|criado_em : TIMESTAMP}",fillcolor="#e9f0fc",color="#66829b"];
+    categorias -> produtos [label="1 : N",fontname="Arial",fontsize=11,color="#557b41",penwidth=2];
+    usuarios -> categorias [style=dashed,color="#b0b8b0",label="gerencia via aplicação",fontname="Arial",fontsize=9,arrowhead=none];
+}

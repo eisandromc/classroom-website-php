@@ -1,0 +1,50 @@
+### WebShoes API REST — exemplos didáticos (extensão REST Client do VS Code)
+@base = http://localhost/webshoes/04-api-rest/index.php
+
+### 0. Consultar a integridade real do banco MySQL (resposta 503 se falhar)
+GET {{base}}?rota=saude
+
+### 1. Consultar sessão e obter token CSRF
+GET {{base}}?rota=sessao
+Accept: application/json
+
+### 2. Autenticar (substitua o token devolvido pelo passo anterior)
+POST {{base}}?rota=login
+Content-Type: application/json
+X-CSRF-Token: SUBSTITUA_PELO_TOKEN_CSRF
+
+{"usuario":"admin","senha":"admin"}
+
+### 3. Consultar categorias (público)
+GET {{base}}?rota=categorias
+
+### 4. Consultar produtos (público)
+GET {{base}}?rota=produtos
+
+### 5. Cadastrar categoria (sessão autenticada e token CSRF atual obrigatórios)
+POST {{base}}?rota=categorias
+Content-Type: application/json
+X-CSRF-Token: SUBSTITUA_PELO_TOKEN_CSRF
+
+{"nome":"Caminhada","slug":"caminhada","descricao":"Para caminhar","cor":"#EEEEEE","ativo":1}
+
+### 6. Cadastrar produto (use categoria_id existente)
+POST {{base}}?rota=produtos
+Content-Type: application/json
+X-CSRF-Token: SUBSTITUA_PELO_TOKEN_CSRF
+
+{"categoria_id":1,"nome":"Tênis Exemplo","slug":"tenis-exemplo","marca":"WEB","descricao_curta":"Conforto básico","descricao":"Descrição do tênis de exemplo","preco":149.90,"preco_anterior":179.90,"imagem":"tenis-01.svg","etiqueta":"NOVO","cor":"Cinza","tamanhos":"36,37,38,39","ativo":1,"destaque":1}
+
+### 7. Editar produto 1 (corpo COMPLETO, não apenas os campos modificados)
+PUT {{base}}?rota=produtos/1
+Content-Type: application/json
+X-CSRF-Token: SUBSTITUA_PELO_TOKEN_CSRF
+
+{"categoria_id":1,"nome":"Tênis Exemplo atualizado","slug":"tenis-exemplo-atualizado","marca":"WEB","descricao_curta":"Conforto básico","descricao":"Descrição atualizada","preco":169.90,"preco_anterior":179.90,"imagem":"tenis-01.svg","etiqueta":"NOVO","cor":"Preto","tamanhos":"36,37,38,39","ativo":1,"destaque":1}
+
+### 8. Excluir produto 1 (apenas se for o registro que deseja excluir)
+DELETE {{base}}?rota=produtos/1
+X-CSRF-Token: SUBSTITUA_PELO_TOKEN_CSRF
+
+### 9. Upload: use o formulário da versão 03, ou envie POST multipart/form-data
+###     com campo imagem, arquivo JPG/PNG/WEBP e token CSRF.
